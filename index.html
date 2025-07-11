@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>🎯 Smart Task Tracker</title>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body class="theme-red">
+  <header>
+    🎯 Daily Goals Tracker
+    <div class="toolbar">
+      <button onclick="toggleQuotes()">🌐 Hindi/English</button>
+      <button onclick="changeQuote()">💡 New Quote</button>
+      <button onclick="switchTheme()">🎨 Theme</button>
+    </div>
+  </header>
+
+  <div class="container">
+    <!-- Quote Area -->
+    <div class="quote" id="quote">Loading...</div>
+
+    <!-- Task Input Area -->
+    <div class="task-controls">
+      <input type="text" id="taskInput" placeholder="✍ Enter your task..." />
+      <input type="date" id="calendar" />
+      <button onclick="addTask()">➕ Add Task</button>
+      <button onclick="speakTask()">🎤 Voice Add</button>
+    </div>
+
+    <!-- Task List -->
+    <ul id="taskList"></ul>
+
+    <!-- Reward Button (only shown when all tasks are done) -->
+    <button id="rewardBtn" style="display: none;" onclick="location.href='reward.html'">
+      🎁 See My Reward
+    </button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
